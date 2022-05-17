@@ -1,18 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import Welcome from './components/Welcome'
+import StateAndEvent from './components/StateAndEvent';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <a
-          className="App-link"
-          href="https://naver.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          리액트 배우기
-        </a>
+        <Welcome username="유관우" age="33"></Welcome>
+        <StateAndEvent></StateAndEvent>
       </header>
     </div>
   );
