@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ArrayMap from './components/ArrayMap'
 import AxiosTest from './page/AxiosTest';
 import NewsApiPage from './page/NewsApiPage';
+import AuthPage from './page/AuthPage';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/b" element={<ArrayMap/>}></Route>
         <Route path="/axiosTest" element={<AxiosTest/>}></Route>
         <Route path='/newsApiPage' element={<NewsApiPage/>}></Route>
+        <Route path='' element={<AuthPage/>}></Route>
       </Routes>
     </BrowserRouter>
   );
