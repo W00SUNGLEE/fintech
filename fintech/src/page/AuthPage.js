@@ -10,11 +10,12 @@ const AuthButton = styled.button`
 `
 
 const AuthPage = () => {
-  
+
     const handleAuthButtonClick = () => {
         //새창으로 인증사이트 오픈
         const authPageUrl = "https://testapi.openbanking.or.kr/oauth/2.0/authorize?response_type=code&client_id=b27b0251-26c4-4051-9559-fed2970864fe&redirect_uri=http://localhost:3000/authResult&scope=login inquiry transfer&state=12345678901234567890123456789012&auth_type=0"
-        window.open(authPageUrl)
+        let tmpwindow = window.open(authPageUrl)
+        tmpwindow.location.href = authPageUrl
     }
   
     return (

@@ -6,7 +6,8 @@ import ArrayMap from './components/ArrayMap'
 import AxiosTest from './page/AxiosTest';
 import NewsApiPage from './page/NewsApiPage';
 import AuthPage from './page/AuthPage';
-
+import AuthResultPage from './page/AuthResultPage';
+import MainPage from './page/MainPage';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
         <Route path="/axiosTest" element={<AxiosTest/>}></Route>
         <Route path='/newsApiPage' element={<NewsApiPage/>}></Route>
         <Route path='' element={<AuthPage/>}></Route>
+        <Route path='/authResult' element={<AuthResultPage/>}></Route>
+        <Route path="/main" element={<MainPage/>}></Route>
       </Routes>
     </BrowserRouter>
   );
