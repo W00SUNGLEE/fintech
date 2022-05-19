@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import AppBar from '../components/common/AppBar'
 import axios from 'axios'
+import MainCard from '../components/main/MainCard'
 
 const MainPage = () => {
-  const [accountList, setAccoutList] = useState([])
+  const [accountList, setAccountList] = useState([])
   const accessToken = localStorage.getItem('accessToken');
   const userSeqNo = localStorage.getItem('user_seq_no');
 
@@ -33,8 +34,8 @@ const MainPage = () => {
     }
 
     axios(option).then(({data}) => {
-        console.log(data)
-        setAccoutList(data.res_list)
+        console.log(data);
+        setAccountList(data.res_list);
     })
     console.log(accountList)
   }
@@ -44,8 +45,8 @@ const MainPage = () => {
         <AppBar title={"메인페이지"}/>
         {/* fintech_use_no 을 반복문을 통해 출력 */}
         {
-            accountList.map(({fintech_use_num})=> {
-                return <p>{fintech_use_num}</p>
+            accountList.map((account)=> {
+                return <MainCard bankName={account.bank_name} fintechUseNo={account.fintech_use_num}></MainCard>
             })
         }  
     </>
